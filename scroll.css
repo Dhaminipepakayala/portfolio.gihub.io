@@ -1,0 +1,327 @@
+
+*{
+    padding:0;
+    margin:0;
+    text-decoration: none;
+    list-style:none;
+}
+ /*scroll */
+    html{
+    scroll-behavior: smooth;
+}
+#s1 {
+    min-height: 100vh;
+    width:100%;
+    display:flex;
+}
+
+.scroll
+{
+    height:50px;
+    width:30px;
+    border :2px solid rgb(42, 202, 202);
+    position:absolute;
+    left:50%;
+    bottom:30px;
+    border-radius:50px;
+    cursor:pointer;
+}
+.scroll::before,
+.scroll::after{
+    content:'';
+    position:absolute;
+    top:20%;
+    left:50%;
+    border:2px solid rgb(40, 190, 190);
+    height:10px;
+    width:10px;
+    transform:translate(-50%,-50%) rotate(45deg);
+    border-top:transparent;
+    border-left:transparent;
+    animation:scroll 1s ease-in-out infinite;
+}
+.scroll::after{
+    top:30%;
+    animation-delay: .3s;
+
+}
+@keyframes scroll{
+    0%{
+        opacity:0;
+    }
+    30%{
+        opacity:1;
+    }
+    60%{
+        opacity:1;
+    }
+    100%{
+        opacity:0;
+        top:90%;
+    }
+}
+/*cards courses and credentials*/
+
+.card{
+    top:20%;
+    position:relative;
+    width:300px;
+    height:150px;
+    background:#fff;
+    border-radius: 10px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    transition:0.5s;
+}
+.card:hover{
+    height:200px;
+    
+}
+.icon{
+    position:absolute;
+    width:150px;
+    height:150px;
+    box-shadow: 0 35px 80px rgba(0,0,0,0.35);
+z-index: 5;
+  left:50%;
+  top:-50%;
+  transform:translatex(-50%);
+  border-radius:50%;
+}
+.card :hover .icon{
+    width:200px;
+    height:200px;
+}
+.icon img{
+    position:absolute;
+    border-radius:50%;
+
+top:0;
+left:0;
+ width:100%;
+ height:100%;
+ object-fit: cover; 
+}
+
+.details{
+    position:absolute;
+    top:0;
+    left:0;
+    display:none;
+  }
+.card .icon:hover + .details{
+    display:block;
+    font-size:1.25em;
+    font-weight: 600;
+    color:#555;
+    line-height:1.2em;
+    text-align: center;
+    transform:translateY(83px);
+   padding:0 5px 0 5px ;
+}
+.card h2{
+    font-size:1.25em;
+    font-weight: 600;
+    color:#555;
+    text-align: center;
+    transform:translateY(57px);
+   
+}
+.card .btn{
+    width:50%;
+    height:15%;
+    border-radius: 10px;
+    background-color: rgb(14, 118, 150);
+    position:absolute;
+    text-align:center;
+   padding: 2px 0 2px 0;
+   right:25%;
+   bottom:20%;
+}
+.btn{
+    color:white;
+}
+/* skills */
+#skil{
+    min-height: 60vh;
+    width:100%;
+    display: flex;
+}
+.name{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.box{
+    position:absolute;
+    
+    left:50%;
+    transform:translate(-50%,-10%);
+    width:80%;
+    height:45%;
+    background:transparent;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    display:flex;
+}
+
+.box .skill{
+    position:relative;
+    flex:1;
+    text-align: center;
+
+}
+.box .skill .graph{
+    position:absolute;
+    width:35%;
+    background:rgba(0,0,0,1);
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
+}
+.box .skill .graph:before{
+    content:'';
+    position:absolute;
+    top:2px;
+    right:2px;
+    left:2px;
+    bottom:0;
+    background: linear-gradient(0deg,#003ba5,#009ffe);
+}
+.box .skill .graph:after{
+    content:'';
+    position:absolute;
+    top:0;
+  
+    left:0;
+    width:50%;
+    height:100%;
+    background: rgba(255,255,255,.1);
+}
+.box .skill .graph .percent{
+    position:absolute;
+    top:-10%;
+    left:50%;
+    transform:translateX(-50%);
+    color:#fff;
+    text-align: center;
+    font-weight: bold;
+}
+.box .skill .name{
+    position:absolute;
+    bottom:-36%;
+    left:50%;
+    transform:translateX(-50%);
+    text-align:center;
+    color:#fff;
+    
+    padding:2px 6px;
+    border-radius:4px;
+}
+@media (max-width:900px){
+    .box .skill .name
+    {
+        bottom:-20%;
+    }   
+.box .skill .name p{
+display:none;
+}
+}
+#html{
+    height:80%;
+    animation :html 5s;
+}
+#css{
+    height:60%;
+    animation :css 5s;
+}
+
+#cpp{
+    height:85%;
+    animation :cpp 5s;
+}
+#js{
+    height:40%;
+    animation :js 5s;
+}
+#java{
+    height:70%;
+    animation :java 5s;
+}
+#bs{
+    height:60%;
+    animation :bs 5s;
+}
+#cp{
+    height:80%;
+    animation :cp 5s;
+}
+@keyframes html{
+    0%{
+        height:0%;
+    }
+    100%{
+        height:80%;
+    }
+}
+@keyframes cp{
+    0%{
+        height:0%;
+    }
+    100%{
+        height:80%;
+    }
+}
+@keyframes cpp{
+    0%{
+        height:0%;
+    }
+    100%{
+        height:85%;
+    }
+}
+@keyframes java{
+    0%{
+        height:0%;
+    }
+    100%{
+        height:70%;
+    }
+}
+@keyframes js{
+    0%{
+        height:0%;
+    }
+    100%{
+        height:40%;
+    }
+}
+
+@keyframes bs{
+    0%{
+        height:0%;
+    }
+    100%{
+        height:60%;
+    }
+}
+@keyframes css{
+    0%{
+        height:0%;
+    }
+    100%{
+        height:60%;
+    }
+}
+.card-body .btn{
+    bottom:2;  
+  
+}
+.card-body .btn:hover{
+    color:white;
+    background-color: rgb(21, 189, 144);
+}
+.card-body:hover{
+    color:white;
+    background-color: #085478;
+border-radius: 10px;
+}

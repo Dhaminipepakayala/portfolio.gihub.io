@@ -217,7 +217,7 @@ left:0;
     padding:2px 6px;
     border-radius:4px;
 }
-@media (max-width:900px){
+@media (orientation : portrait){
     .box .skill .name
     {
         bottom:-20%;
@@ -225,6 +225,19 @@ left:0;
 .box .skill .name p{
 display:none;
 }
+}
+@media (orientation : landscape)
+{
+    .box .skill .name
+    {
+        bottom:-50%;
+    } 
+    .box .skill .name p{
+        display:none;
+        }
+        .box .skill .graph .percent{
+            top:-18%;
+        }
 }
 #html{
     height:80%;

@@ -24,13 +24,24 @@ overflow-x: hidden;
 .navbar-nav{
     float :right;
 }
-@media(max-width : 768px){
+@media(orientation : portrait){
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
     vertical-align: top;
     padding-right: 5%;
   }
+  
+  .navbar .navbar-collapse {
+    text-align: center;
+  }
+}
+@media(orientation : landscape){
+    .navbar-nav{
+        padding-right:5%;
+    }
+
+}
   
   .navbar .navbar-collapse {
     text-align: center;
@@ -109,11 +120,12 @@ text-shadow: 4px 4px 2px black;}
    animation: back 15s linear infinite;
    /* font-family: 'Roboto', sans-serif; */
 }
-@media(max-width:900px)
+@media(orientation : landscape)
 {
-    .text h1{
-        font-size:18vw;
+    .text{
+        bottom:10%;
     }
+
 }
 @keyframes back{
    100%{

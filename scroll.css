@@ -226,14 +226,14 @@ left:0;
 display:none;
 }
 }
-@media (min-width:900px)
+@media (orientation : landscape)
 {
     .box .skill .name
     {
-        bottom:-50%;
+        bottom:-40%;
     } 
     .box .skill .name p{
-        display:none;
+        display:block;
         }
         .box .skill .graph .percent{
             top:-18%;
